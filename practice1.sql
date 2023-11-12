@@ -1,20 +1,4 @@
 --- Example 1 (Hackerrank): Revising the Select query II
-/*
-Query the names of all American cities in CITY with populations larger than 120,000. The CountryCode for America is USA.
-
-## Input Format
-
-+-------------+--------------+
-| Field       | Type         |
-+-------------+--------------+
-| ID          | NUMBER       |
-| NAME        | VARCHAR2(17) |
-| COUNTRYCODE | VARCHAR2(3)  |
-| DISTRICT    | VARCHAR2(20) |
-| POPULATION  | NUMBER       |
-+-------------+--------------+
-*/
-
 SELECT NAME
 FROM CITY
 WHERE COUNTRYCODE = "USA" AND POPULATION > 120000;
@@ -32,3 +16,21 @@ FROM STATION;
 SELECT DISTINCT CITY
 FROM STATION
 WHERE CITY LIKE "A%" OR CITY LIKE "E%" OR CITY LIKE "I%" OR CITY LIKE "O%" OR CITY LIKE "U%";
+
+--- Example 5 (Hackerrank): Weather Observation Station 7
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY LIKE "%A" OR CITY LIKE "%E" OR CITY LIKE "%I" OR CITY LIKE "%O" OR CITY LIKE "%U";
+
+--- Example 6 (Hackerrank): Weather Observation Station 9
+SELECT DISTINCT CITY FROM STATION
+WHERE CITY NOT LIKE "A%" AND CITY NOT LIKE "E%" AND CITY NOT LIKE "I%" AND CITY NOT LIKE "O%" AND CITY NOT LIKE "U%";
+
+--- Example 7 (Hackerrank): Employee names
+select name from Employee
+order by name asc;
+
+--- Example 8 (Hackerrank): Employee salary
+select name from Employee
+where salary > 2000 and months < 10
+order by employee_id asc;
