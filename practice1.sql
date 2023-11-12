@@ -54,8 +54,15 @@ where author_id = viewer_id
 order by author_id asc
 
 --- Example 13 Tesla Unfinished Parts
+SELECT part, assembly_step
+FROM parts_assembly
+WHERE finish_date IS NULL;
 
+--- Example 14 Lyft Drive Wages
+SELECT * FROM lyft_drivers
+WHERE
+ yearly_salary <= 30000 OR yearly_salary >= 70000;
 
---- Example 14
-
---- Example 15
+--- Example 15 Advertising channel where Uber spent more than 100k USD in 2019
+select distinct advertising_channel from uber_advertising
+where money_spent > 100000 and year = 2019;
