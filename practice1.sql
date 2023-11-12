@@ -34,3 +34,28 @@ order by name asc;
 select name from Employee
 where salary > 2000 and months < 10
 order by employee_id asc;
+
+--- Example 9 (Leetcode) Recyclable and Low Fat Products
+select product_id from Products
+where low_fats = 'Y' and recyclable = 'Y';
+
+--- Example 10 (Leetcode) Find Customer Referee
+select name from Customer
+where referee_id <> 2 or referee_id IS NULL;
+
+--- Example 11 (Leetcode) Big Countries
+select name, area, population  from World
+where area >= 3000000 or population >= 25000000;
+
+--- Example 12 
+select distinct author_id as id
+from Views
+where author_id = viewer_id
+order by author_id asc
+
+--- Example 13 Tesla Unfinished Parts
+
+
+--- Example 14
+
+--- Example 15
